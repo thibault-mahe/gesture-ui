@@ -44,6 +44,9 @@
 						<span class="fa fa-bars"></span>
 					</button>
 					<a class="navbar-brand" href="#"><i class="fa fa-rocket"></i> Programme Télé</a>
+					<pre id="initbox">
+						Got Leap? Waiting for Leap Controller....
+					</pre>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
@@ -214,6 +217,37 @@
 			enableMetaGestures: true,
 			enableDefaultMetaGestureActions: true
 		});
+		var controller = new Leap.Controller();
+
+		controller.on('ready', function() {
+			document.getElementById('initbox').innerHTML = 'It works!';
+			console.log("It works");
+		});
+		controller.on('connect', function() {
+			document.getElementById('initbox').innerHTML = 'Waiting to connect...';
+			console.log("connect");
+		});
+		controller.on('disconnect', function() {
+			document.getElementById('initbox').innerHTML = 'Leap was disconnected...';
+			console.log("disconnect");
+		});
+		controller.on('focus', function() {
+			document.getElementById('initbox').innerHTML = 'Leapstrap is ready (Leap detected).';
+			console.log("focus");
+		});
+		controller.on('blur', function() {
+			document.getElementById('initbox').innerHTML = 'Leapstrap is not in focus.';
+			console.log("blur");
+		});
+		controller.on('deviceConnected', function() {
+			document.getElementById('initbox').innerHTML = 'A Leap Controller was connected.';
+			console.log("deviceConnected");
+		});
+		controller.on('deviceDisconnected', function() {
+			document.getElementById('initbox').innerHTML = 'The Leap Controller was disconnected.';
+			console.log("deviceDisconnected");
+		});
+		controller.connect();
 	</script>
 	<script type="text/javascript">
 	  var $buoop = {vs:{i:8,f:20,o:17,s:6},reminder:0};
