@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Programme Télé</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="canonical" href="http://" />
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://" />
+
+	<link rel="stylesheet" href="//wilkesalex.github.io/leapstrap/dist/css/leapstrap.css" />
+	<link rel="stylesheet/less" type="text/css" href="less/main.less" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+	<script src="//js.leapmotion.com/0.3.0-beta3/leap.js"></script>
+	<script src="//wilkesalex.github.io/leapstrap/dist/js/leapstrap.js"></script>
+
+	<script src="assets/less-1.7.4/dist/less-1.7.4.min.js" type="text/javascript"></script>
+
+</head>
+<body class="leap-interactive" leap-disable-tap="true" leap-disable-hover="true">
+
+	<header>
+		<div class="skip-nav">
+			<ul>
+				<li><a href="#navigation">Aller au menu</a></li>
+				<li><a href="#content" accesskey="s">Aller au contenu</a></li>
+				<li><a href="#search" accesskey="4">Aller à la recherche</a></li>
+			</ul>
+		</div>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="fa fa-bars"></span>
+					</button>
+					<a class="navbar-brand" href="#"><i class="fa fa-rocket"></i> Programme Télé</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Link</a></li>
+						<li class="active"><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h1>Page Chaîne</h1>
+			<a class="btn btn-block btn-primary" href="index.html">Retour</a>
+		</section>
+	</main>
+
+	<footer></footer>
+
+	<script src="assets/bootstrap-3.2.0/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script>
+		LeapManager.init({
+			interactiveSelector: "a",
+			maxCursors:1,
+			enableMetaGestures: true,
+			enableDefaultMetaGestureActions: true
+		});
+	</script>
+	<script type="text/javascript">
+	  var $buoop = {vs:{i:8,f:20,o:17,s:6},reminder:0};
+	  $buoop.ol = window.onload;
+	  window.onload=function(){
+		try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+		var e = document.createElement("script");
+		e.setAttribute("type", "text/javascript");
+		e.setAttribute("src", "//browser-update.org/update.js");
+		document.body.appendChild(e);
+	  }
+	</script>
+
+</body>
+</html>
